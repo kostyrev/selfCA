@@ -1,0 +1,13 @@
+---
+# defaults file for selfCA
+ca_root_path: /etc/pki/koji
+countryName_default: 'RU'
+stateOrProvinceName_default: 'Moscow'
+localityName_default: 'Moscow'
+organizationName_default: 'My company'
+organizationalUnitName: 'IT'
+CN: 'koji.example.org'
+ca_private_key: CA.key
+ca_cert: CA.crt
+
+
