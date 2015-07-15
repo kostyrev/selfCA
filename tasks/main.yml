@@ -6,8 +6,8 @@
 - name: "Create {{ ca_root_path }}/certs"
   file: path="{{ ca_root_path }}/certs" state=directory mode=0755
 
-- name: "Create {{ ca_root_path }}/confs"
-  file: path="{{ ca_root_path }}/confs" state=directory mode=0755
+- name: "Create {{ ca_root_path }}/config"
+  file: path="{{ ca_root_path }}/config" state=directory mode=0755
 
 - name: "Configure CA ssl.cnf"
   template: src=ssl.cnf.j2 
