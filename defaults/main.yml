@@ -1,5 +1,7 @@
 ---
 # defaults file for selfCA
+ssl_cnf_owner: root
+ssl_cnf_group: root
 ca_root_path: /etc/pki/koji
 countryName_default: 'RU'
 stateOrProvinceName_default: 'Moscow'

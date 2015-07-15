@@ -12,9 +12,9 @@
 - name: "Configure CA ssl.cnf"
   template: src=ssl.cnf.j2 
             dest="{{ ca_root_path }}/ssl.cnf"
-            owner=root
-            group=root
-            mode=0744
+            owner={{ ssl_cnf_owner }}
+            group={{ ssl_cnf_group }}
+            mode=0644
 
 - name: "touch index"
   shell: "touch {{ ca_root_path }}/index"
@@ -46,6 +46,6 @@
 - name: "Setup certgen.sh"
   template: src=certgen.sh.j2
             dest="{{ ca_root_path }}/certgen.sh"
-            owner=root
-            group=root
+            owner={{ ssl_cnf_owner }}
+            group={{ ssl_cnf_group }}
             mode=0755
